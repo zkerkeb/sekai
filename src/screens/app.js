@@ -6,7 +6,8 @@ import './app.css';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      <Header label="Vive la France"></Header>
+      <Header label="Vive l'Algerie"></Header>
     </div>
   );
 }
