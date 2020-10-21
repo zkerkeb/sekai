@@ -4,7 +4,6 @@ import logo from '../../assets/logo.svg';
 import './index.css'
 
 const Header = (props) => {
-    console.log("Header -> props", props)
     return(
     <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
