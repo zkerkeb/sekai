@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Counter from '../components/counter'
+import Header from '../components/header'
 
 import './app.css';
 
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
+      <Header label="ace"></Header>
     </div>
   );
 }
