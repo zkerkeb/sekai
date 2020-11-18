@@ -1,28 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import logo from '../../assets/logo.svg';
+import styled from 'styled-components'
 import './index.css'
 
 
-const Header = (props) => {
+const Header = () => {
     return(
-    <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>
-        {props.label}
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Learn React
-    </a>
-  </header>
+    <HeaderContainer>
+      <TextMenu>HEADER</TextMenu>
+    </HeaderContainer>
     )
 }
+
+const TextMenu = styled.span`
+  color:white;
+`
+
+const HeaderContainer = styled.div`
+  padding:12px;
+  background-color: #222222;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+`
 
 Header.propTypes = {
   label: PropTypes.string
