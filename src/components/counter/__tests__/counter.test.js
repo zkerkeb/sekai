@@ -28,3 +28,18 @@ test('Counter have two buttons', () =>{
     expect(button).toBeTruthy()
   })
   
+  test('+ button should increment', () => {
+    const {getByText, getByTestId} = render(<Counter/>)
+    const button = getByText('+')
+    fireEvent.click(button)
+    const counterValue = getByTestId('counterValue')
+    expect(counterValue).toHaveTextContent("1")
+  })
+  
+  test('- button should increment', () => {
+    const {getByText, getByTestId} = render(<Counter/>)
+    const button = getByText('-')
+    fireEvent.click(button)
+    const counterValue = getByTestId('counterValue')
+    expect(counterValue).toHaveTextContent("-1")
+  })
