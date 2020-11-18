@@ -8,3 +8,23 @@ test('Counter To match snapshot', ()=>{
     const {asFragment} = render(<Counter></Counter>)
     expect(asFragment()).toMatchSnapshot()
 })
+
+
+test('Counter have two buttons', () =>{
+    const {getAllByRole} = render(<Counter/>)
+    const buttons = getAllByRole('button')
+    expect(buttons).toHaveLength(2)
+  })
+  
+  test('Counter have a + button', () => {
+    const {getByText} = render(<Counter></Counter>)
+    const button = getByText('+')
+    expect(button).toBeTruthy()
+  })
+  
+  test('have a counter displayer', () => {
+    const {getByText } = render(<Counter></Counter>)
+    const button = getByText('0')
+    expect(button).toBeTruthy()
+  })
+  
