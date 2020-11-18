@@ -43,3 +43,16 @@ test('Counter have two buttons', () =>{
     const counterValue = getByTestId('counterValue')
     expect(counterValue).toHaveTextContent("-1")
   })
+
+  test('Should have a default title "Compteur"', () => {
+    const {getByRole} = render(<Counter/>)
+    const title= getByRole('heading')
+    expect(title).toHaveTextContent("Compteur")
+  })
+  
+  
+  test('Should have the title passed in props', () => {
+    const {getByRole} = render(<Counter label="Algerie"/>)
+    const title= getByRole('heading')
+    expect(title).toHaveTextContent("Algerie")
+  })
