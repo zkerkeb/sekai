@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../components/header'
-import Characters from '../components/characters'
+import Counter from '../components/counter'
 
 import './app.css';
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Characters></Characters>
+      <Counter></Counter>
     </div>
   );
 }

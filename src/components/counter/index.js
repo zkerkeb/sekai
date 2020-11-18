@@ -3,12 +3,12 @@ import React, {useState} from 'react'
 
 
 
-const Counter = () => {
+const Counter = ({label = 'Compteur'}) => {
     const [counter, setCounter] = useState(0)
-    
-
     return(
-        <div><p>{counter}</p>
+        <div>
+            <h1>{label}</h1>
+            <p data-testid="counterValue">{counter}</p>
         <div>
             <button onClick={() => setCounter(counter - 1)} >-</button>
             <button onClick={() => setCounter(counter + 1)}>+</button>
